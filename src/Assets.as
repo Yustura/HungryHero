@@ -6,19 +6,19 @@ package
 
 	public class Assets
 	{
-		[Embed(source="../media(graphigs/bgWelcome.jpg")]
+		[Embed(source="../media/graphics/bgWelcome.jpg")]
 		public static const BgWelcome:Class;
 		
-		[Embed(source="../media(graphigs/welcome:hero.png")]
+		[Embed(source="../media/graphics/welcome_hero.png")]
 		public static const WelcomeHero:Class;
 		
-		[Embed(source="../media(graphigs/welcome_title.png")]
+		[Embed(source="../media/graphics/welcome_title.png")]
 		public static const WelcomeTitle:Class;
 		
-		[Embed(source="../media(graphigs/Welcome_playButton.png")]
+		[Embed(source="../media/graphics/welcome_playButton.png")]
 		public static const WelcomePlayBtn:Class;
 		
-		[Embed(source="../media(graphigs/welcome_aboutButton.jpg")]
+		[Embed(source="../media/graphics/welcome_aboutButton.png")]
 		public static const welcomeAboutBtn:Class;
 		
 		private static var gameTextures:Dictionary = new Dictionary();
@@ -27,7 +27,7 @@ package
 		{
 			if (gameTextures[name] == undefined)
 			{
-				var bitmap:Bitmap = new Assets[name]();
+				var bitmap_Bitmap = new Assets[name]();
 				gameTextures[name] = Texture.fromBitmap(bitmap);
 			}
 			return gameTextures[name];
