@@ -71,6 +71,9 @@ package screens
 		{
 			var currentDate:Date = new Date();
 			hero.y = 100 + (Math.cos(currentDate.getTime() * 0.002) * 25);
+			playBtn.y = 260 + (Math.cos(currentDate.getTime() * 0.002) * 10);
+			aboutBtn.y = 380 + (Math.cos(currentDate.getTime() * 0.002) * 10);
+
 		}
 	}
 }
