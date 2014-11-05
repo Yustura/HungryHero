@@ -86,6 +86,7 @@ package starling.events
         private var mStopsPropagation:Boolean;
         private var mStopsImmediatePropagation:Boolean;
         private var mData:Object;
+        public var NavigationEvent:Object;
         
         /** Creates an event object that can be passed to listeners. */
         public function Event(type:String, bubbles:Boolean=false, data:Object=null)

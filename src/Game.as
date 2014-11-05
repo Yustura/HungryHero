@@ -1,5 +1,6 @@
 package
 {
+	import screens.InGame;
 	import screens.Welcome;
 	
 	import starling.display.Sprite;
@@ -8,6 +9,8 @@ package
 	public class Game extends Sprite
 	{
 		private var screenWelcome:Welcome;
+		private var screenInGame;
+		
 		public function Game()
 		{
 			super();
@@ -18,9 +21,24 @@ package
 		{
 			trace("starling framework initialized!");
 			
+			this.addEventListener(event.NavigationEvent.CHANGE_SCREEN, onChangeScreen);
+			
+			screenInGame = new InGame();
+			screenInGame.disposeTemporarily();
+			this.addChild(screenInGame);
+			
 			screenWelcome = new Welcome();
 			this.addChild(screenWelcome);
 			screenWelcome.initialize();
+		}
+		
+		private function onChangeScreen(NavigationEvent):void
+		{
+			switch (event.params.id)
+			{
+				case "play":
+					break;
+			}
 		}
 	}
 }
